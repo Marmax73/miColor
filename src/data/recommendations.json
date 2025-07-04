@@ -1,0 +1,22 @@
+{
+  "claro": {
+    "ropa": ["celeste", "lavanda", "beige"],
+    "labial": ["rosa claro", "melocotón"],
+    "uñas": ["nude", "rosa pastel"]
+  },
+  "medio": {
+    "ropa": ["coral", "verde oliva", "azul marino"],
+    "labial": ["rojo", "rosado oscuro"],
+    "uñas": ["bordó", "terracota"]
+  },
+  "oscuro": {
+    "ropa": ["rojo vino", "mostaza", "turquesa"],
+    "labial": ["bordó", "ciruela"],
+    "uñas": ["negro", "dorado"]
+  },
+  "oliva": {
+    "ropa": ["fucsia", "cobre", "verde jade"],
+    "labial": ["marrón cálido", "terracota"],
+    "uñas": ["verde seco", "bronce"]
+  }
+}
