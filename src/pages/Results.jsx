@@ -45,6 +45,11 @@ export default function Results() {
           </div>
         ))}
       </div>
+      <div className="mt-8 text-center">
+        <button className="bg-pink-500 text-white px-4 py-2 rounded-md">
+          Volver a empezar
+        </button>
+      </div>
     </div>
   );
 }

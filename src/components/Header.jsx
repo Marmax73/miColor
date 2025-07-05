@@ -3,13 +3,13 @@ import React from 'react';
 
 const Header = ({ userName, userImage }) => {
   return (
-    <header className="flex items-center justify-between px-4 py-3 bg-white shadow-md">
+    <header className="flex items-center justify-between  bg-white shadow-md">
       {/* Logo */}
       <div className="flex items-center gap-3">
         <img
-          src="/image/logo.png" // Reemplaza esto con la ruta real de la imagen
+          src="/logo.png" // Reemplaza esto con la ruta real de la imagen
           alt="Logo"
-          className="w-10 h-10"
+          className="w-20 h-20 p-0 mt-2"
         />
         <nav className="hidden md:flex gap-6 text-gray-700 font-medium">
           <a href="#nosotros" className="hover:text-green-600 transition">Nosotros</a>
@@ -23,7 +23,7 @@ const Header = ({ userName, userImage }) => {
         {userImage && (
           <img
             src={userImage}
-            alt="Avatar del usuario"
+            alt="Avatar"
             className="w-8 h-8 rounded-full object-cover"
           />
         )}
