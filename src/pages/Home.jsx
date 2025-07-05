@@ -1,6 +1,8 @@
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+ // Asegúrate de que la ruta sea correcta
+
 export default function Home() {
   const [skinTone, setSkinTone] = useState(null);
   const navigate = useNavigate();
@@ -12,7 +14,15 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-nude flex flex-col items-center justify-center px-4 py-8 font-sans">
+    
+    <div className="min-h-screen bg-nude flex flex-col items-center justify-center px-4 py-8 font-sans border-2 ">
+      <img
+        src="/mujerconfondotransparenteAmpliacion.png" // Asegúrate de que la ruta sea correcta
+        alt="Logo o imagen principal"
+        className="w-50% h-auto md:w-48 mb-6"
+        style={{ scale: "1.2"}}
+        
+      />
       <h1 className="text-3xl md:text-4xl font-semibold text-pink-600 mb-6 text-center">
         ¿Cuál es tu tono de piel?
       </h1>
