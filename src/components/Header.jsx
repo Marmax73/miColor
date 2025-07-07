@@ -1,11 +1,14 @@
 // components/Header.jsx
 import React from 'react';
+import ImageUploader from "../components/ImageUploader"; // Asegúrate de que la ruta sea correcta
+import Incripcion from "../components/inscripcion"; // Asegúrate de que la ruta sea correcta
+
 
 const Header = ({ userName, userImage }) => {
   return (
-    <header className="flex items-center justify-between  bg-white shadow-md">
+    <header className="flex items-center justify-between  bg-white shadow-md w-80% border-blue-500">
       {/* Logo */}
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-5">
         <img
           src="/logo.png" // Reemplaza esto con la ruta real de la imagen
           alt="Logo"
@@ -17,18 +20,17 @@ const Header = ({ userName, userImage }) => {
           <a href="#explorar" className="hover:text-green-600 transition">Explorar +</a>
         </nav>
       </div>
-
+       <div className='flex items-center '>
+        <Incripcion />
+       </div>
       {/* Usuario */}
-      <div className="flex items-center gap-3">
-        {userImage && (
-          <img
-            src={userImage}
-            alt="Avatar"
-            className="w-8 h-8 rounded-full object-cover"
-          />
-        )}
-        <span className="text-sm text-gray-700 font-semibold">{userName}</span>
+      <div className='flex items-center'>
+         <ImageUploader />
+         
       </div>
+
+      
+      
     </header>
   );
 };

@@ -1,6 +1,6 @@
 // src/pages/Results.jsx
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";//enrutador entre archivos
 import recommendations from "../data/recommendations.json";
 
 export default function Results() {
