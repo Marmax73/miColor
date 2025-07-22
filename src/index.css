@@ -22,3 +22,35 @@ code {
 .App {
   text-align: center;
 }
+
+.cursor-pointer  {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #fbcfe8;
+  
+  text-decoration: none;
+}
+
+.cursor-pointer .nav-links {
+  color: #db2777;
+  text-decoration: none;
+}
+
+.texto-navegador {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: orangered;
+}
+
+.nav-links {
+  text-decoration: none;
+  color: #db2777;
+  width: 80%;
+  
+}
+
+.nav-links :hover {
+  background-color: #fbcfe8;
+  border-radius: 10%;
+}
+
