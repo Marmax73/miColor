@@ -16,9 +16,9 @@ const Nav = () => {
     <>
       {!isMobile ? (
         // Vista de escritorio
-        <nav className="nav flex justify-between items-center text-white">
+        <nav className="nav flex justify-between items-center text-white p-0">
           <div className="flex items-center gap-6">
-            <img src="/logo.png" alt="Logo" className="w-20 h-20" />
+            <img src="/logo2.png" alt="Logo" className="w-20 h-23 p-0" />
             <ul className="flex gap-6">
               <li>
                 <Link to="/" className="nav-links">Inicio</Link>
@@ -42,14 +42,18 @@ const Nav = () => {
         </nav>
       ) : (
         // Vista móvil con menú hamburguesa
-        <div className="relative">
-          <button onClick={toggleMenu} className="text-pink-700 cursor-pointer text-2xl p-2 transition-1000">
+        <div className="relative ">
+          
+                <img src="/logo2.png" alt="Logo" className=" w-25 h-25 p-0 sm:h-1 mx-auto mt-0 mb-0 justify-center" />
+          
+          <button onClick={toggleMenu} className="text-pink-700 cursor-pointer ml-auto text-xl p-2 transition-1000 ">
 
             ☰
           </button>
 
           {show && (
-            <div className="absolute left-0 top-full w-full bg-pink-200 text-white p-4 z-50 ">
+            <div className="absolute  top-full w-full bg-pink-200 text-white p-4 z-50 ">
+
               <ul className="flex flex-col gap-4">
                 <li onClick={toggleMenu}>
                   <Link to="/" className="nav-links">Inicio</Link>
@@ -67,8 +71,13 @@ const Nav = () => {
                   <Link to="/signup" className="nav-links">Registrarse</Link>
                 </li>
               </ul>
+              
+             
+              
             </div>
+            
           )}
+          
         </div>
       )}
     </>
