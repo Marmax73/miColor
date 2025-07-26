@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { useState } from 'react';
 import ManejarDimensionPantalla from '../utils/DimensionPantalla';
+import SignUp from '../pages/SignUp';
+
 
 const Nav = () => {
   const [show, setShow] = useState(false);
@@ -36,7 +38,7 @@ const Nav = () => {
               <Link to="/signin">Iniciar sesión</Link>
             </li>
             <li>
-              <Link to="/signup">Registrarse</Link>
+              <SignUp />
             </li>
           </ul>
         </nav>
@@ -46,7 +48,7 @@ const Nav = () => {
           
                 <img src="/logo2.png" alt="Logo" className=" w-25 h-25 p-0 sm:h-1 mx-auto mt-0 mb-0 justify-center" />
           
-          <button onClick={toggleMenu} className="text-pink-700 cursor-pointer ml-auto text-xl p-2 transition-1000 ">
+          <button onClick={toggleMenu} className="text-pink-700 hover:scale-110 hover:border-pink-600 hover:border-1 cursor-pointer ml-auto text-xl p-2 transition-1000 ">
 
             ☰
           </button>
@@ -68,7 +70,7 @@ const Nav = () => {
                   <Link to="/signin" className="nav-links">Iniciar sesión</Link>
                 </li>
                 <li onClick={toggleMenu}>
-                  <Link to="/signup" className="nav-links">Registrarse</Link>
+                 <SignUp />
                 </li>
               </ul>
               

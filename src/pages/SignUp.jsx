@@ -1,17 +1,60 @@
+import React, { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+
 const SignUp = () => {
+  
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  // Cierra el menú si se hace clic fuera
+  useEffect((e) => {
+    
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   return (
-    <div>
-      <form>
-        <h2>Registrarse</h2>
-        <label htmlFor="name">Nombre</label>
-        <input type="text" name="name" />
-        <label htmlFor="email">Correo Electrónico</label>
-        <input type="email" name="email" />
-        <label htmlFor="password">Contraseña</label>
-        <input type="password" name="password" />
-        <button type="submit">Registrarse</button>
-      </form>
+    <div ref={dropdownRef} className="relative">
+      <button
+       
+        onClick={(e) =>{ e.stopPropagation(); setIsOpen((prev) => !prev)}}
+        className="px-1 py-2 bg-pink-200 text-pink-700 text-left rounded-md hover:bg-gradient-to-r from-pink-200 to-pink-500  hover:scale-105 hover:text-white transition w-full sm:w-auto"
+      >
+        Darme de alta
+      </button>
+
+      {isOpen && (
+        <ul
+          className="absolute duration-800 mt-0 top-full w-56 bg-white border border-gray-300 rounded-md shadow-lg z-[9999]"
+        >
+          <li>
+            <Link
+              to="/userTienda"
+              className="block px-4 py-2 hover:bg-gray-100 text-gray-700 underline-offset-0 hover:text-pink-700"
+              onClick={() =>  setIsOpen(false)}
+            >
+              Inscribirme como Tienda
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/userCliente"
+              className="block px-4 py-2 hover:bg-gray-100 text-gray-700 underline-offset-0 hover:text-pink-700"
+              onClick={() => setIsOpen(false)}
+            >
+              Inscribirme como Clienta
+            </Link>
+          </li>
+        </ul>
+      )}
     </div>
   );
-}
+};
+
 export default SignUp;
