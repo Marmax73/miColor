@@ -70,7 +70,6 @@ const CameraCapture = ({ onCapture }) => {
       <canvas ref={canvasRef} style={{ display: 'none' }} />
 
       <div className="flex justify-between gap-2">
-        {!stream && (
           <button onClick={startCamera} className="bg-blue-500 text-white px-3 py-1 rounded">
             Iniciar cámara
           </button>
