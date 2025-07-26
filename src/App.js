@@ -6,8 +6,8 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import Nosotros from "./pages/Nosotros";
 import Contacto from "./pages/Contacto";
-import UserTienda from "./pages/userTienda";
-import UserCliente from "./pages/userCliente";
+import UserTiendaForm from "./pages/userTienda";
+import UserClienteForm from "./pages/userCliente";
 
 function App() {
   return (
@@ -22,8 +22,8 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/contacto" element={<Contacto />} />
-        <Route path="/userTienda" element={<UserTienda/>} />
-        <Route path="/userCliente" element={<UserCliente />} />
+        <Route path="/userTienda" element={<UserTiendaForm/>} />
+        <Route path="/userCliente" element={<UserClienteForm />} />
       </Routes>
     </>
   );

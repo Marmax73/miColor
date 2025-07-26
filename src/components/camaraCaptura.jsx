@@ -73,7 +73,7 @@ const CameraCapture = ({ onCapture }) => {
           <button onClick={startCamera} className="bg-blue-500 text-white px-3 py-1 rounded">
             Iniciar cámara
           </button>
-        )}
+        
         {stream && (
           <>
             <button onClick={takePhoto} className="bg-green-500 text-white px-3 py-1 rounded">
