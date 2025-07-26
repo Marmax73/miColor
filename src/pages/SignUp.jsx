@@ -35,7 +35,7 @@ const SignUp = () => {
         >
           <li>
             <Link
-              to="/userTienda"
+              to="/userTiendaForm"
               className="block px-4 py-2 hover:bg-gray-100 text-gray-700 underline-offset-0 hover:text-pink-700"
               onClick={() =>  setIsOpen(false)}
             >
@@ -44,7 +44,7 @@ const SignUp = () => {
           </li>
           <li>
             <Link
-              to="/userCliente"
+              to="/userClienteForm"
               className="block px-4 py-2 hover:bg-gray-100 text-gray-700 underline-offset-0 hover:text-pink-700"
               onClick={() => setIsOpen(false)}
             >

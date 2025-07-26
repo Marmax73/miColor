@@ -1,5 +1,5 @@
 import BotonRetorno from "../components/BotonRetorno";
-const userCliente = () => {
+const userClienteForm = () => {
     return (
         <div>
             <h1>Bienvenida. Estás por ingresar como clienta</h1>
@@ -10,4 +10,4 @@ const userCliente = () => {
         </div>
     );
 }
-export default userCliente;
+export default userClienteForm;
