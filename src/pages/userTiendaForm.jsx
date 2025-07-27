@@ -1,20 +1,30 @@
-import CamaraCaptura from "../components/camaraCaptura";
 
+                
+
+      import CamaraCaptura from "../components/camaraCaptura";
 import BotonRetorno from "../components/BotonRetorno";
-const userTiendaForm = () => {
-    return (
-        <div className="p-4 display flex flex-col items-center justify-center gap-4 text-center">
-            <h1>Bienvenida estas por ingresar como Vendedora</h1>
-            <p>Aquí podrás encontrar una variedad de productos y servicios.</p>
-            <div className="flex w-5 h-4 justify-items-center p-3 mb-2 display-block m-auto">
-                <h4>Escanéa tus productos</h4>
-                <CamaraCaptura />
-            </div>
-            <hr />
-            <div className="flex w-5  p-4 justify-items-center mt-2">
-                <BotonRetorno />
-            </div>
-        </div>
-    );
-}
-export default userTiendaForm;
+
+const UserTiendaForm = () => {
+  return (
+    <div className="p-4 flex flex-col items-center justify-center gap-4 text-center min-h-screen">
+      <h1 className="text-xl font-semibold">Bienvenida, estás por ingresar como Vendedora</h1>
+      <p className="text-base">Aquí podrás encontrar una variedad de productos y servicios.</p>
+
+      <div className="w-[80%] aspect-video mb-4 flex flex-col items-center justify-center gap-2">
+        <h4 className="text-lg font-medium">Escanéa tus productos</h4>
+        <CamaraCaptura />
+      </div>
+
+      <hr className="w-full border-t border-gray-300" />
+
+      <div className="mt-1">
+        <BotonRetorno />
+      </div>
+    </div>
+  );
+};
+
+export default UserTiendaForm;
+          
+                
+                
