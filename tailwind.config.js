@@ -14,5 +14,46 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addComponents }) {
+    addComponents({
+      '.btn-primary': {
+        backgroundColor: '#2563eb',
+        color: 'white',
+        padding: '0.5rem 1rem',
+        borderRadius: '9999px',
+      },
+      '.btn-secondary': {
+        backgroundColor: '#6366f1',
+        color: 'white',
+        padding: '0.5rem 1rem',
+        borderRadius: '9999px',
+      },
+      '.btn-success': {
+        backgroundColor: '#10b981',
+        color: 'white',
+        padding: '0.5rem 1rem',
+        borderRadius: '9999px',
+      },
+      '.btn-danger': {
+        backgroundColor: '#ef4444',
+        color: 'white',
+        padding: '0.5rem 1rem',
+        borderRadius: '9999px',
+      },
+      '.btn-warning': {
+        backgroundColor: '#facc15',
+        color: 'white',
+        padding: '0.5rem 1rem',
+        borderRadius: '9999px',
+      },
+      '.btn-gray': {
+        backgroundColor: '#6b7280',
+        color: 'white',
+        padding: '0.5rem 1rem',
+        borderRadius: '9999px',
+      },
+    });
+   }
+  ],
 };
