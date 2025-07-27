@@ -9,12 +9,19 @@ const CameraCapture = ({ onCapture }) => {
   const [videoUrl, setVideoUrl] = useState(null);
 
   const startCamera = async () => {
+     try {
     const mediaStream = await navigator.mediaDevices.getUserMedia({
       video: true,
-      audio: true
+      audio: true,
     });
     videoRef.current.srcObject = mediaStream;
     setStream(mediaStream);
+  } catch (error) {
+    console.error("Error al iniciar cámara:", error);
+    alert("No se pudo acceder a la cámara. Verificá los permisos.");
+  }
+    console.log('Video Ref:', videoRef.current);
+
   };
 
   const stopCamera = () => {
@@ -70,7 +77,7 @@ const CameraCapture = ({ onCapture }) => {
       <canvas ref={canvasRef} style={{ display: 'none' }} />
 
       <div className="flex justify-between gap-2">
-          <button onClick={startCamera} className="bg-blue-500 text-white px-3 py-1 rounded">
+          <button onClick={startCamera} className="bg-blue-500 hover:bg-blue-200 text-white px-3 py-1 rounded">
             Iniciar cámara
           </button>
         
