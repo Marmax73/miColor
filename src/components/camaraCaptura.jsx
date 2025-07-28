@@ -131,3 +131,5 @@ const CameraCapture = () => {
 };
 
 export default CameraCapture;
+// SIGUIENTE SOLUCIÓN PARA LA CÁMARA.
+//¿Querés que integre esta cámara como parte de una PWA o que funcione offline? También puedo ayudarte a guardar los medios con IndexedDB para evitar que se pierdan al cerrar la app. ¿Te interesa?
