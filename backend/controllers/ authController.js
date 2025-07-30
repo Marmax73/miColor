@@ -7,7 +7,11 @@ import dotenv from 'dotenv';
 dotenv.config();
 const prisma = new PrismaClient();
 
+
+
+
 export const registerTienda = async (req, res) => {
+console.log("🔔 registerTienda INVOCADO"); // <--- clave
   try {
     const {
       email,
@@ -18,7 +22,7 @@ export const registerTienda = async (req, res) => {
       direccion,
       localidad
     } = req.body;
-
+    console.log('Datos recibidos:', req.body);
     // Validar existencia previa
     const existingUser = await prisma.user.findUnique({ where: { email } });
     if (existingUser) return res.status(400).json({ error: 'Usuario ya registrado.' });

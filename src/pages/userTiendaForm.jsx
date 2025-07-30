@@ -7,6 +7,7 @@ const SignUpTienda = () => {
   const [form, setForm] = useState({
     email: '',
     password: '',
+    nombre: '',
     nombreComercial: '',
     direccion: '',
     localidad: '',
@@ -19,19 +20,27 @@ const SignUpTienda = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('/api/auth/signup/tienda', form); // Ruta backend
+      const res = await axios.post('/api/auth/register/tienda', form); // Ruta backend
       const { token } = res.data;
       localStorage.setItem('token', token); // Guarda el JWT
       alert('Usuario tienda creado con éxito');
-    } catch (err) {
-      alert('Error al registrarse');
-      console.error(err);
+    
+     } catch (err) {
+       if (err.response) {
+    console.error('Error del servidor:', err.response.data);
+    alert(err.response.data.error || 'Error al registrarse');
+    } else {
+    console.error('Error desconocido:', err.message);
+    alert('Error al registrarse');
     }
-  };
+  }
+
+  }
+  
 
   return (
-   <>
-  <div className="flex flex-col items-center justify-center h-[50vh] w-full px-4 mt-10">
+    <>
+    <div className="flex flex-col items-center justify-center h-[50vh] w-full px-4 mt-10">
     <form
       onSubmit={handleSubmit}
       className="w-full max-w-md p-4 border border-pink-500 rounded-md space-y-4 bg-white shadow"
@@ -44,6 +53,15 @@ const SignUpTienda = () => {
         required
         className="w-full p-2 border border-gray-300 rounded"
       />
+      <input
+        type="text"
+        name="nombre"
+        placeholder="Nombre responsable"
+        onChange={handleChange}
+        required
+        className="w-full p-2 border border-gray-300 rounded"
+      />
+       
       <input
         type="password"
         name="password"
