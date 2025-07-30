@@ -24,7 +24,7 @@ const SignUp = () => {
       <button
        
         onClick={(e) =>{ e.stopPropagation(); setIsOpen((prev) => !prev)}}
-        className="px-1 py-2 bg-pink-200 text-pink-700 text-left rounded-md hover:bg-gradient-to-r from-pink-200 to-pink-500  hover:scale-105 hover:text-white transition w-full sm:w-auto"
+        className="p-5 py-2 bg-pink-100 text-pink-700 text-left rounded-md hover:bg-gradient-to-r from-pink-200 to-pink-500  hover:scale-105 hover:text-white transition w-full sm:w-auto mr-2"
       >
         Darme de alta
       </button>

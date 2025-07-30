@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 const BotonRetorno = () => {
     return (
-        <button className="botonHome flex p-2 bg-pink-500 rounded-sm hover:bg-pink-100 hover:text-pink-700 ml-auto ">
+        <button className="botonHome flex p-2 bg-pink-500 rounded-sm hover:bg-pink-700 hover:text-white ml-auto ">
             <Link to="/" className="text-white underline-offset-0">Inicio</Link>
         </button>
     )
