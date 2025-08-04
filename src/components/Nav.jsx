@@ -14,6 +14,10 @@ const Nav = () => {
     setShow((prev) => !prev);
   };
 
+ // Colores complementarios para pink: Cian pastel (turquesa claro) → #e7f9fc
+
+  //Verde lima pastel (amarillo verdoso claro) → #f1fce7
+
   return (
     <>
       {!isMobile ? (
@@ -35,7 +39,7 @@ const Nav = () => {
           </div>
           <ul className="flex gap-4">
             <li className='flex mt-1'>
-              <Link to="/signin" className='underline-offset-0 px-3 py-1   text-pink-700 text-left rounded-md hover:bg-gradient-to-r from-pink-200 to-pink-500  hover:scale-105  transition w-full sm:w-auto mr-2 border-2 border-pink-400'>Iniciar sesión</Link>
+              <Link to="/signin" className='underline-offset-0 px-3 py-1   text-pink-700 text-left rounded-md hover:bg-pink-50  hover:scale-105  transition w-full sm:w-auto mr-2 border-2 border-pink-400'>Iniciar sesión</Link>
             </li>
             <li>
               <SignUp />

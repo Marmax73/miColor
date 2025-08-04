@@ -40,7 +40,7 @@ const SignUpTienda = () => {
 
   return (
     <>
-    <div className="flex flex-col items-center justify-center h-[50vh] w-full px-4 mt-10">
+    <div className="flex flex-col items-center justify-center h-[50vh] w-full px-4 mt-20">
     <form
       onSubmit={handleSubmit}
       className="w-full max-w-md p-4 border border-pink-500 rounded-md space-y-4 bg-white shadow"
